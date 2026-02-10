@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75415effed6b79409461b6b19d3a4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 6
+  rotationSpeed: 8
 --- !u!1 &691230717
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,19 +642,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5bd3f168213118f4a8063dc32fbdc870, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.38179073
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5bd3f168213118f4a8063dc32fbdc870, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5bd3f168213118f4a8063dc32fbdc870, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9242488
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5bd3f168213118f4a8063dc32fbdc870, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5bd3f168213118f4a8063dc32fbdc870, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -660,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5bd3f168213118f4a8063dc32fbdc870, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -224.889
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5bd3f168213118f4a8063dc32fbdc870, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

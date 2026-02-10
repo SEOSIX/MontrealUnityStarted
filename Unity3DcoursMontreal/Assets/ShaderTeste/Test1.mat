@@ -42,7 +42,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: -0.01
-    - _SpeedHorizontal: 1.05
+    - _SpeedHorizontal: 3.03
     - _VignetteStrenght: 0
     m_Colors:
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
