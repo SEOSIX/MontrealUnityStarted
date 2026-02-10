@@ -5,6 +5,9 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 6f;
+    
+    [Header("Rotation")]
+    [SerializeField] private float rotationSpeed = 8f;
 
     private Rigidbody rb;
     private Vector3 moveInput;
@@ -24,6 +27,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         ApplyMovement();
+        ApplyRotation();
     }
 
     private void InitRigidbody()
@@ -54,5 +58,16 @@ public class PlayerController : MonoBehaviour
             velocity.y,
             targetVelocity.z
         );
+    }
+
+    private void ApplyRotation()
+    {
+        if (moveDirection.sqrMagnitude > 0.001f)
+            return;
+        
+        Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+        Quaternion newRotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        
+        rb.MoveRotation(newRotation);
     }
 }
